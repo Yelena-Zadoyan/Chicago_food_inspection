@@ -7,8 +7,8 @@ import seaborn as sns
 data = pd.read_csv('Food_Inspections.csv')
 #MODELLING WITHOUT REINSPECTION category
 #dropping the 1 na row with missing inspection type
-#data = data.drop(data[data['Inspection Type'].isna()].index)
-#data = data[~data['Inspection Type'].str.contains('Re-Inspection', case=False)]
+data = data.drop(data[data['Inspection Type'].isna()].index)
+data = data[~data['Inspection Type'].str.contains('Re-Inspection', case=False)]
 # print(data.shape)
 # print(data.dtypes)
 
